@@ -1,19 +1,29 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { setFilter } from "../../redux/filters/filtersSlice";
+import { fetchData } from "../../redux/Operations/SearchOps";
 import s from "./SearchBox.module.css";
-import { setFilter } from "../../redux/filters/slice";
 const SearchBox = () => {
+  const [city, setCity] = useState("");
   const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!city.trim()) return;
+    dispatch(fetchData(city));
+    setCity("");
+  };
   return (
-    <div className={s.searchBox}>
-      <p>Find contact by name</p>
+    <form onSubmit={handleSubmit} className={s.searchBox}>
+      <svg className={s.icon}>
+        <use href="/src/assets/icons.svg#icon-search"></use>
+      </svg>
       <input
         className={s.input}
-        name="name"
         type="text"
-        onChange={(e) => dispatch(setFilter(e.target.value))}
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
       />
-    </div>
+    </form>
   );
 };
 
