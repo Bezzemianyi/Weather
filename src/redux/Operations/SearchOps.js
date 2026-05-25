@@ -20,8 +20,10 @@ export const fetchData = createAsyncThunk(
       const weatherResponse = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&units=metric&appid=${API_KEY}`
       );
-      console.log(location);
-      return weatherResponse.data;
+      return {
+        weather: weatherResponse.data,
+        cityName: location.local_names?.uk || location.name,
+      };
     } catch (error) {
       console.log(error);
     }

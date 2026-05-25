@@ -14,9 +14,9 @@ const App = () => {
     dispatch(fetchData());
   }, [dispatch]);
   return (
-    <div className="flex">
+    <div className="heroSection">
       <Navigation />
-      <div>
+      <div className="centrInfo">
         <SearchBox />
         <WeatherTodayList />
         <WeatherAdditList />

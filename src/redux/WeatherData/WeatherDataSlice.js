@@ -19,7 +19,9 @@ const slice = createSlice({
 
       .addCase(fetchData.fulfilled, (state, action) => {
         state.loading = false;
-        state.current = action.payload;
+        state.current = action.payload.weather;
+        console.log(state.current);
+        state.current.name = action.payload.cityName;
       })
 
       .addCase(fetchData.rejected, (state, action) => {

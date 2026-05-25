@@ -1,0 +1,48 @@
+.navBox {
+  padding: 50px 30px;
+  background-color: #303136;
+  box-sizing: border-box;
+  border-radius: 30px;
+  min-height: 940px;
+}
+
+.iconLogo {
+  width: 41px;
+  height: 41px;
+  padding-bottom: 50px;
+  margin-left: 3px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: rgba(255, 255, 255, 0.55);
+}
+
+.icon:active {
+  fill: white;
+}
+
+.list::before {
+  content: "";
+  width: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.37);
+  display: block;
+  margin-bottom: 50px;
+}
+
+.list::after {
+  content: "";
+  width: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.37);
+  display: block;
+  margin-top: 50px;
+}
+
+.item {
+  text-align: center;
+}
+
+.item:not(:last-child) {
+  padding-bottom: 72px;
+}
