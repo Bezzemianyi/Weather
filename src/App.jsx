@@ -7,6 +7,7 @@ import WeatherTodayList from "./components/WeatherTodayList/WeatherTodayList";
 import { fetchData } from "./redux/Operations/SearchOps";
 import { useDispatch } from "react-redux";
 import "./index.css";
+import ForecastList from "./components/WeatherTodayList/ForecastList";
 const App = () => {
   const dispatch = useDispatch();
 
@@ -19,6 +20,7 @@ const App = () => {
       <div className="centrInfo">
         <SearchBox />
         <WeatherTodayList />
+        <ForecastList />
         <WeatherAdditList />
       </div>
       <WeatherDays />

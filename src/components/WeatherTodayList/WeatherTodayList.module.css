@@ -32,3 +32,63 @@
   height: 100%;
   object-fit: contain;
 }
+
+.forecastBox {
+  display: flex;
+  gap: 60px;
+  overflow-x: auto;
+  margin-top: 32px;
+  background-color: #303136;
+  border-radius: 30px;
+  justify-content: center;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.card {
+  max-width: 70px;
+  /* padding: 20px; */
+
+  border-radius: 20px;
+  /* background-color: #303136; */
+
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.37);
+  /* margin-right: 32px; */
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.forecastBox .card:last-child::after {
+  display: none;
+}
+.time {
+  font-size: 18px;
+}
+
+.temp {
+  margin-top: 20px;
+  font-size: 36px;
+}
+
+.weather {
+  margin-top: 10px;
+  opacity: 0.7;
+}
+
+.icon {
+  margin-top: 22px;
+  width: 70px;
+  height: 55px;
+  object-fit: contain;
+}

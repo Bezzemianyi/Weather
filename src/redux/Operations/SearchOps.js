@@ -18,11 +18,17 @@ export const fetchData = createAsyncThunk(
       const lon = location.lon;
 
       const weatherResponse = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&units=metric&appid=${API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
       );
+      const weatherForecast = await axios.get(
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+      );
+      // console.log(weatherForecast.data);
+      // console.log(weatherResponse.data);
       return {
         weather: weatherResponse.data,
         cityName: location.local_names?.uk || location.name,
+        forecast: weatherForecast.data,
       };
     } catch (error) {
       console.log(error);

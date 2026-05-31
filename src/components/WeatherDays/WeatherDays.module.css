@@ -1,0 +1,54 @@
+.forecastBox {
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  padding: 50px 30px;
+  max-width: 400px;
+  max-height: 938px;
+  background-color: #303136;
+}
+
+.title {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 60px;
+}
+
+.card {
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 100px;
+}
+
+/* .card:first-child {
+  margin-top: 40px;
+} */
+
+.dayName {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.weather {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 55px;
+  height: 55px;
+}
+
+.discription {
+  color: white;
+}
+
+.maxMin {
+  color: white;
+}

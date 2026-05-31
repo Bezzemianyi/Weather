@@ -3,6 +3,7 @@ import { fetchData } from "../Operations/SearchOps";
 
 const initialState = {
   current: null,
+  forecast: [],
   loading: false,
   error: null,
 };
@@ -20,7 +21,7 @@ const slice = createSlice({
       .addCase(fetchData.fulfilled, (state, action) => {
         state.loading = false;
         state.current = action.payload.weather;
-        console.log(state.current);
+        state.forecast = action.payload.forecast.list;
         state.current.name = action.payload.cityName;
       })
 
