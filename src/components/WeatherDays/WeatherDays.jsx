@@ -6,7 +6,7 @@ import Item from "./Item.jsx";
 
 const WeatherDays = () => {
   const forecast = useSelector((state) => state.weather.forecast);
-  if (!forecast.length) return null;
+  // if (!forecast.length) return null;
   const dailyForecast = forecast
     .filter((item) => item.dt_txt.includes("15:00:00"))
     .map((day) => ({

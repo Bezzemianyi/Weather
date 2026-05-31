@@ -3,7 +3,7 @@
   box-sizing: border-box;
   border-radius: 30px;
   padding: 50px 30px;
-  max-width: 400px;
+  width: 400px;
   max-height: 938px;
   background-color: #303136;
 }
