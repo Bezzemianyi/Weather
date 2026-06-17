@@ -8,7 +8,7 @@
 }
 
 .city {
-  font-size: 36px;
+  font-size: clamp(24px, 5vw, 36px);
   font-weight: 400;
   color: white;
 }
@@ -16,7 +16,7 @@
 .degree {
   margin-top: 50px;
   font-weight: 400;
-  font-size: 96px;
+  font-size: clamp(48px, 10vw, 96px);
   letter-spacing: -0.08em;
   color: white;
 }
@@ -37,32 +37,38 @@
   display: flex;
   gap: 60px;
   overflow-x: auto;
+  scrollbar-width: none;
   margin-top: 32px;
   background-color: #303136;
   border-radius: 30px;
-  justify-content: center;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  /* justify-content: center; */
+  /* justify-content: flex-start; */
+
+  padding: 45px 30px;
+  min-width: 0;
 }
 
+.forecastBox::-webkit-scrollbar {
+  display: none;
+}
 .card {
-  max-width: 70px;
-  /* padding: 20px; */
-
+  width: 70px;
+  flex-shrink: 0;
   border-radius: 20px;
-  /* background-color: #303136; */
 
   text-align: center;
   color: white;
   position: relative;
 }
 
+.card:first-child {
+  margin-left: 35px;
+}
 .card::after {
   content: "";
   display: block;
   height: 150px;
   border: 1px solid rgba(255, 255, 255, 0.37);
-  /* margin-right: 32px; */
   position: absolute;
   right: -30px;
   top: 50%;

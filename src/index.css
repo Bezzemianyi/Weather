@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   list-style-type: none;
   padding: 0;
@@ -11,16 +12,34 @@ body {
   background: linear-gradient(41deg, #131419 0%, #26272c 100%);
 }
 
-.heroSection {
-  margin-top: 48px;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
+@media screen and (min-width: 375px) {
+  .heroSection {
+    max-width: 767px;
+    margin: 32px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobileHeader {
+    display: none;
+  }
+  .heroSection {
+    max-width: 1440px;
+    margin: 32px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 32px;
+  }
 }
 
 .centrInfo {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: 790px;
+  min-width: 0;
+  width: 100%;
 }

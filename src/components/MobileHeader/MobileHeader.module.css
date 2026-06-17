@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  padding: 0 28px;
+}
+
+.iconList {
+  fill: white;
+  width: 24px;
+  height: 24px;
+}
+.iconLogo {
+  width: 34px;
+  height: 34px;
+}

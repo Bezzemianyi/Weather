@@ -8,21 +8,27 @@ import { fetchData } from "./redux/Operations/SearchOps";
 import { useDispatch } from "react-redux";
 import "./index.css";
 import ForecastList from "./components/WeatherTodayList/ForecastList";
+import MobileHeader from "./components/MobileHeader/MobileHeader";
 const App = () => {
   const dispatch = useDispatch();
-
+  const isMobile = window.innerWidth < 768;
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
+  console.log(window.innerWidth);
+  console.log(isMobile);
   return (
     <div className="heroSection">
-      <Navigation />
+      {isMobile ? <MobileHeader /> : <Navigation />}
+
       <div className="centrInfo">
-        <SearchBox />
+        {!isMobile && <SearchBox />}
+
         <WeatherTodayList />
         <ForecastList />
         <WeatherAdditList />
       </div>
+
       <WeatherDays />
     </div>
   );
