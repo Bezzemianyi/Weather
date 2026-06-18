@@ -27,7 +27,9 @@
     background-color: #303136;
     box-sizing: border-box;
     border-radius: 30px;
-    min-height: 935px;
+    /* min-height: 935px; */
+    height: auto;
+    flex-shrink: 0;
   }
 
   .iconLogo {

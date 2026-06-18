@@ -1,6 +1,41 @@
 @media screen and (min-width: 375px) {
   .list {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    margin-top: 35px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .card {
+    /* width: calc((100% - 60px) / 2); */
+    /* width: 172px; */
+    width: auto;
+    flex-shrink: 0;
+    color: white;
+    background: rgba(48, 49, 54, 0.32);
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    fill: white;
+  }
+
+  .title {
+    margin-left: 12px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .value {
+    /* margin-left: 50px; */
+    /* margin-top: 10px; */
+    margin-top: 32px;
+    font-size: 36px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -11,14 +46,15 @@
     padding: 30px;
     background: #303136;
     border-radius: 30px;
-    padding-left: 50px;
-    padding-top: 30px;
     min-width: 0;
+    margin: 0;
   }
 
   .card {
     width: calc((100% - 60px) / 3);
     color: white;
+    padding: 0;
+    border-radius: 0;
   }
 
   .top {
@@ -30,10 +66,10 @@
   .icon {
     width: 30px;
     height: 30px;
-    fill: white;
   }
 
   .title {
+    margin: 0;
     opacity: 0.8;
     font-size: 18px;
   }
@@ -41,6 +77,5 @@
   .value {
     margin-left: 50px;
     margin-top: 10px;
-    font-size: 36px;
   }
 }

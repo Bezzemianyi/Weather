@@ -32,6 +32,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    align-items: stretch;
     gap: 32px;
   }
 }
