@@ -3,7 +3,7 @@
     display: block;
     position: relative;
     width: 100%;
-    padding: 0 28px;
+    /* padding: 0 28px; */
   }
   .city {
     margin-top: 32px;
@@ -16,10 +16,10 @@
   }
   .img {
     position: absolute;
-    width: 240px;
-    height: 192px;
+    width: 260px;
+    height: 262px;
     object-fit: contain;
-    top: 122px;
+    top: 90px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -36,9 +36,11 @@
     overflow-x: auto;
     scrollbar-width: none;
     margin-top: 32px;
-    background: rgba(48, 49, 54, 0.32);
+    /* background: rgba(48, 49, 54, 0.32); */
+    background-color: #303136;
+
     border-radius: 16px;
-    padding: 45px 30px;
+    padding: 45px 18px;
     min-width: 0;
   }
   .card {
