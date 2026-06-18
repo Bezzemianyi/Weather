@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchData } from "../../redux/Operations/SearchOps";
 import s from "./SearchBox.module.css";
+import sprite from "../../assets/icons.svg";
+
 const SearchBox = () => {
   const [city, setCity] = useState("");
   const dispatch = useDispatch();
@@ -15,7 +17,7 @@ const SearchBox = () => {
   return (
     <form onSubmit={handleSubmit} className={s.searchBox}>
       <svg className={s.icon}>
-        <use href="/src/assets/icons.svg#icon-search"></use>
+        <use href={`${sprite}#icon-search`}></use>
       </svg>
       <input
         className={s.input}
